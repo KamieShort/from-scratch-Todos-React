@@ -1,12 +1,11 @@
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { signInUser } from '../../services/users';
+import { signInUser, signUpUser } from '../../services/users';
 import './Auth.css';
 
 export default function Auth({ setCurrentUser }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [error, setError] = useState('');
 
   const [type, setType] = useState('sign-in');
 
@@ -14,23 +13,28 @@ export default function Auth({ setCurrentUser }) {
 
   const submit = async (e) => {
     e.preventDefault();
-    try {
+    if (type === 'sign-in') {
       const resp = await signInUser(email, password);
       setCurrentUser(resp.email);
       history.push('/');
-    } catch (e) {
-      setError(e.message);
+    } else {
+      const resp = await signUpUser(email, password);
+      setCurrentUser(resp.email);
+      history.push('/');
     }
   };
 
   return (
     <div>
-      <h1>
-        {' '}
-        <span onClick={() => setType('sign-in')}>Sign-In</span>
-        <span onClick={() => setType('sign-up')}>Sign-Up</span>
+      <h1 className="auth-span">
+        <span className={type === 'sign-in' ? 'active' : ''} onClick={() => setType('sign-in')}>
+          Sign-In
+        </span>
+        <span className={type === 'sign-up' ? 'active' : ''} onClick={() => setType('sign-up')}>
+          Sign-Up
+        </span>
       </h1>
-      {error && <p>{error}</p>}
+
       <form className="auth-form" onSubmit={submit}>
         <label>
           Email:

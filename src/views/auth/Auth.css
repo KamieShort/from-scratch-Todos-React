@@ -1,0 +1,8 @@
+span {
+  margin-right: 50px;
+}
+
+.active {
+  color: blueviolet;
+  text-decoration: underline;
+}

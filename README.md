@@ -22,7 +22,7 @@ X header w logout button
 
 ## CSS
 
--show complete todo (use strikethru or check block?)
+-show complete todo (use strikethru (textdecoration) or check block?)
 
 ## Rubric
 
