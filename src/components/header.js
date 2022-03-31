@@ -9,7 +9,7 @@ export default function Header({ currentUser, setCurrentUser }) {
   const logoutClick = async () => {
     await logout();
     setCurrentUser(null);
-    history.push('/');
+    history.push('/auth');
   };
 
   return (
@@ -17,16 +17,16 @@ export default function Header({ currentUser, setCurrentUser }) {
       <NavLink className="nav" exact to="/">
         Home
       </NavLink>
-
-      {/* {currentUser ? ( */}
-      <button className="nav" onClick={logoutClick}>
-        Logout
-      </button>
-      {/* ) : ( */}
-      {/* <NavLink className="nav" exact to="/auth">
-        Sign-In
-      </NavLink> */}
-      {/* )} */}
+      {currentUser && (
+        <button className="nav" onClick={logoutClick}>
+          Logout
+        </button>
+      )}
+      {!currentUser && (
+        <NavLink className="nav" exact to="/auth">
+          Sign-In
+        </NavLink>
+      )}
     </div>
   );
 }
