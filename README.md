@@ -2,8 +2,9 @@
 
 ## SUPABASE
 
--add RLS and policies
--add secrets in netlify and github
+X set up table
+X add RLS and policies
+X add secrets in netlify and github
 
 ## Views
 
@@ -12,11 +13,16 @@
 
 # Services
 
--users.js fetch todos, insert todo delete todo
+-users.js for auth
+-todos. js -fetch todos, insert todo, delete todo
 
 # Components
 
 -header w logout button
+
+## CSS
+
+-show complete todo (use strikethru or check block?)
 
 ## Rubric
 
