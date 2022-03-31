@@ -8,6 +8,8 @@ export default function Auth({ setCurrentUser }) {
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
 
+  const [type, setType] = useState('sign-in');
+
   const history = useHistory();
 
   const submit = async (e) => {
@@ -23,7 +25,11 @@ export default function Auth({ setCurrentUser }) {
 
   return (
     <div>
-      <h1> Add Title HERE</h1>
+      <h1>
+        {' '}
+        <span onClick={() => setType('sign-in')}>Sign-In</span>
+        <span onClick={() => setType('sign-up')}>Sign-Up</span>
+      </h1>
       {error && <p>{error}</p>}
       <form className="auth-form" onSubmit={submit}>
         <label>

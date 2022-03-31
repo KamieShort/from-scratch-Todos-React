@@ -13,12 +13,12 @@ X add secrets in netlify and github
 
 # Services
 
--users.js for auth
+X users.js for auth
 -todos. js -fetch todos, insert todo, delete todo
 
 # Components
 
--header w logout button
+X header w logout button
 
 ## CSS
 
@@ -28,7 +28,7 @@ X add secrets in netlify and github
 
 Sign up / sign in page 4
 Routes properly check for authenticated user 4
-Authenticated users can log out 3
+X Authenticated users can log out 3
 Authenticated users see a list of their tasks 3
 Authenticated users can add new tasks 3
 Authenticated users can complete tasks 3

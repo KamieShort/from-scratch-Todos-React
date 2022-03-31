@@ -15,15 +15,15 @@ export default function Header({ currentUser, setCurrentUser }) {
         Home
       </NavLink>
 
-      {currentUser ? (
-        <button className="nav" onClick={logoutClick}>
-          Logout
-        </button>
-      ) : (
-        <NavLink className="nav" exact to="/auth">
-          Sign-In
-        </NavLink>
-      )}
+      {/* {currentUser ? ( */}
+      <button className="nav" onClick={logoutClick}>
+        Logout
+      </button>
+      {/* ) : ( */}
+      {/* <NavLink className="nav" exact to="/auth">
+        Sign-In
+      </NavLink> */}
+      {/* )} */}
     </div>
   );
 }
