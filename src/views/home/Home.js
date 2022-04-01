@@ -9,7 +9,7 @@ export default function TodosList() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchTodos();
-      console.log(data);
+   
 
       setTodos(data);
     };
