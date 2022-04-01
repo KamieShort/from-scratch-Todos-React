@@ -8,8 +8,8 @@ X add secrets in netlify and github
 
 ## Views
 
--Auth page
--Home (- input for Todo w submit button)
+X Auth page
+X Home (- input for Todo w submit button)
 
 # Services
 

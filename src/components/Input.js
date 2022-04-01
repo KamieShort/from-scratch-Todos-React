@@ -12,7 +12,12 @@ export default function TodoInput({ todo, setTodo }) {
 
   return (
     <div>
-      <input type="text" value={todo} onChange={(e) => setTodo(e.target.value)} />
+      <input
+        type="text"
+        placeholder="new task"
+        value={todo}
+        onChange={(e) => setTodo(e.target.value)}
+      />
       <button onClick={submitTodo}>Submit</button>
     </div>
   );
