@@ -17,8 +17,8 @@ export default function TodosList() {
   }, []);
 
   return (
-    <div>
-      <h1>To-Do&apos;s!!</h1>
+    <div className="home">
+      <h1 className="home-title">To-Do&apos;s!!</h1>
       {todos.map((todo) => (
         <div key={todo.id}>
           <ul>
