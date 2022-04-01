@@ -25,7 +25,7 @@ export default function Auth({ setCurrentUser }) {
   };
 
   return (
-    <div>
+    <div className="auth">
       <h1 className="auth-span">
         <span className={type === 'sign-in' ? 'active' : ''} onClick={() => setType('sign-in')}>
           Sign-In
@@ -37,11 +37,12 @@ export default function Auth({ setCurrentUser }) {
 
       <form className="auth-form" onSubmit={submit}>
         <label>
-          Email:
+          Email:&nbsp;
           <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         </label>
+        &nbsp;
         <label>
-          Password:
+          Password:&nbsp;
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         </label>
         <button>Submit</button>
