@@ -15,7 +15,7 @@ function App() {
       <div className="App">
         <Switch>
           <Route exact path="/">
-            <Home setCurrentUser={setCurrentUser} />
+            <Home />
           </Route>
           <Route exact path="/auth">
             <Auth setCurrentUser={setCurrentUser} />

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import TodoInput from '../../components/Input';
-import { fetchTodos } from '../../services/fetchtodos';
+import { fetchTodos, newTodo } from '../../services/fetchtodos';
+
 import './Home.css';
 
 export default function TodosList() {
@@ -15,7 +16,11 @@ export default function TodosList() {
     };
     fetchData();
   }, []);
+  const submitTodo = async () => {
+    const addedTodo = await newTodo({ todo });
 
+    setTodos((prevState) => [...prevState, addedTodo]);
+  };
   return (
     <div className="home">
       <h1 className="home-title">To-Do&apos;s!!</h1>
@@ -30,7 +35,7 @@ export default function TodosList() {
         </div>
       ))}
 
-      <TodoInput {...{ todo, setTodo }} />
+      <TodoInput {...{ todo, setTodo, submitTodo }} />
     </div>
   );
 }

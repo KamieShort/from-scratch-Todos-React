@@ -29,7 +29,7 @@ X show complete todo (use strikethru (textdecoration) or check block?)
 Sign up / sign in page 4
 X Routes properly check for authenticated user 4
 X Authenticated users can log out 3
-Authenticated users see a list of their tasks 3
+X Authenticated users see a list of their tasks 3
 X Authenticated users can add new tasks 3
 X Authenticated users can complete tasks 3
 Authenticated users can delete tasks + 1

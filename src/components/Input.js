@@ -1,15 +1,6 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 
-import { newTodo } from '../services/fetchtodos';
-
-export default function TodoInput({ todo, setTodo }) {
-  const history = useHistory();
-  const submitTodo = async () => {
-    await newTodo({ todo });
-    history.push('/');
-  };
-
+export default function TodoInput({ todo, setTodo, submitTodo }) {
   return (
     <div>
       <input
