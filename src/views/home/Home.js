@@ -25,7 +25,7 @@ export default function TodosList() {
         </div>
       ))}
 
-      <TodoInput {...{ ...todo }} />
+      <TodoInput {...{ ...todo }} setTodo={setTodo} />
     </div>
   );
 }

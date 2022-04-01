@@ -1,7 +1,7 @@
 import React from 'react';
 import { newTodo } from '../services/fetchtodos';
 
-export default function TodoInput({ todo, todos, setTodos }) {
+export default function TodoInput({ todo }) {
   const submitTodo = async () => {
     await newTodo({ todo });
   };
