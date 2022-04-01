@@ -9,7 +9,6 @@ export default function TodosList() {
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchTodos();
-   
 
       setTodos(data);
     };
@@ -25,7 +24,7 @@ export default function TodosList() {
         </div>
       ))}
 
-      <TodoInput {...{ ...todo }} setTodo={setTodo} />
+      <TodoInput {...{ todo, setTodo }} />
     </div>
   );
 }
