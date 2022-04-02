@@ -9,3 +9,12 @@ export async function newTodo(todo) {
   const resp = await client.from('todos-react').insert(todo).single();
   return checkError(resp);
 }
+
+export async function updateTodo(todo) {
+  console.log(todo);
+  const resp = await client
+    .from('todos-react')
+    .update({ complete: !todo.complete })
+    .match({ id: todo.id });
+  return checkError(resp);
+}
