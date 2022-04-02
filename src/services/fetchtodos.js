@@ -11,7 +11,6 @@ export async function newTodo(todo) {
 }
 
 export async function updateTodo(todo) {
-  console.log(todo);
   const resp = await client
     .from('todos-react')
     .update({ complete: !todo.complete })
