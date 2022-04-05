@@ -18,7 +18,7 @@ function App() {
             {currentUser ? <Home /> : <Redirect to="/auth" />}
           </Route>
           <Route exact path="/auth">
-            <Auth setCurrentUser={setCurrentUser} />
+            {!currentUser ? <Auth setCurrentUser={setCurrentUser} /> : <Redirect to="/" />}
           </Route>
         </Switch>
       </div>
