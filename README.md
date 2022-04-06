@@ -1,25 +1,35 @@
-# Alchemy React Base Template
+# TODOs Plan
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## SUPABASE
 
-Use this template for all your "from scratch" deliverables. To start, simply run
+X set up table
+X add RLS and policies
+X add secrets in netlify and github
 
-- `npm install`
-- `npm start`
+## Views
 
-## Available Scripts
+X Auth page
+X Home (- input for Todo w submit button)
 
-In the project directory, you can run:
+# Services
 
-### `npm start`
+X users.js for auth
+-todos. js -fetch todos, insert todo, delete todo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Components
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+X header w logout button
 
-### `npm test`
+## CSS
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+X show complete todo (use strikethru (textdecoration) or check block?)
+
+## Rubric
+
+Sign up / sign in page 4
+X Routes properly check for authenticated user 4
+X Authenticated users can log out 3
+X Authenticated users see a list of their tasks 3
+X Authenticated users can add new tasks 3
+X Authenticated users can complete tasks 3
+Authenticated users can delete tasks + 1

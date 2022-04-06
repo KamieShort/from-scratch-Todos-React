@@ -1,0 +1,22 @@
+span {
+  margin-right: 50px;
+}
+
+.active {
+  color: blueviolet;
+  text-decoration: underline;
+}
+
+.auth {
+  font-family: 'Kalam', cursive;
+  background-color: rgb(255, 181, 167);
+  height: 100vh;
+}
+
+h1 {
+  margin: 0px;
+}
+
+.auth-form {
+  font-size: 25px;
+}

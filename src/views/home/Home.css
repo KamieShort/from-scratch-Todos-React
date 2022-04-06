@@ -1,0 +1,17 @@
+ul {
+  list-style-type: none;
+  font-size: 25px;
+  color: rgb(0, 175, 185);
+  font-weight: bolder;
+}
+
+.home {
+  font-family: 'Kalam', cursive;
+  background-color: rgb(255, 181, 167);
+  height: 100vh;
+}
+
+.home-title {
+  font-size: 55px;
+  margin: 0;
+}
